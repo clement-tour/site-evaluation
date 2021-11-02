@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title> Visite virtuelle</title>
+    <meta name="description"
+        content="Découvrez les visites virtuelles et voyager votre salon, votre bureau et n'importe où">
+    <link rel="stylesheet" href="Bootstrap+jquery/bootstrap.min.css">
+    <link href="style.css" rel="stylesheet" type="text/css">
+
+</head>
+
+<body>
+    <header class="container-fluid">
+        <div class="row justify-content-center">
+            <div class="plane-box">
+                <img class="plane" src="icone/avion4.png" alt="">
+                <img class="planete" src="icone/planete4.png" alt="">
+                <img class="canape" src="icone/gif.gif" alt="">
+            </div>
+            <h1 class="text-skyblue text-center">Visites virtuelles</h1>
+        </div>
+    </header>
+
+    <nav class="navbar navbar-expand-sm navbar-dark bg-skyblue">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">Menu</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link" aria-current="page" href="index.html">Accueil</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="articles.html">Articles</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="contact.html" tabindex="-1" aria-disabled="true"> Contact</a>
+                    </li>
+                </ul>
+                <form class="d-flex">
+                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-outline-success" type="submit">Search</button>
+                </form>
+            </div>
+        </div>
+    </nav>
+    <nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a class="breadcrump-link" href="index.html">Accueil</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Contact</li>
+        </ol>
+    </nav>
+
+    <main class="container-fluid" id="start">
+        <h2 class="hcontact col-12 col-md-5">Pour toute question ou suggestion, contactez moi avec ce formulaire :</h2>
+        <form class="col-6 col-md-4 m-4" action="contact.php" method="post">
+            <div class="mb-3">
+                <label for="nom" class="form-label">Nom</label>
+                <input type="text" class="form-control" id="nom" placeholder="Votre nom" required>
+            </div>
+            <div class="mb-3">
+                <label for="prenom" class="form-label">Prénom</label>
+                <input type="text" class="form-control" id="prenom" placeholder="Votre Prénom" required>
+            </div>
+            <div class="mb-3">
+                <label for="mail" class="form-label">Adresse mail</label>
+                <input type="email" class="form-control" id="mail" placeholder="Votre mail" required>
+            </div>
+            <div class="mb-3">
+                <label for="comment" class="form-label">Commentaire</label>
+                <textarea class="form-control" id="comment" name="story" rows="5" cols="33"
+                    placeholder="Votre commentaire" required>
+          </textarea>
+            </div>
+            <div>
+                <p>Avez-vous apprécié ce site ?</p>
+                <input class="form-check-input" type="radio" id="oui" name="question" value="oui">
+                <label class="form-check-label" for="oui">Oui</label>
+            </div>
+            <div>
+                <input class="form-check-input" type="radio" id="non" name="question" value="non">
+                <label class="form-check-label" for="non">Non</label>
+            </div>
+            <button type="submit" class="btn btn-primary m-3" data-bs-toggle="modal" data-bs-target="#MyModal">Envoyer
+            </button>
+        </form>
+
+        <div class="modal fade" id="MyModal" tabindex="-1" aria-labelledby="MyModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="MyModalLabel">Avertissement</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <p>Pour le moment l'envoi du formulaire ne fonctionne pas car je n'ai pas vu les notions
+                            nécessaires pour cela 😄 </p>
+                        <p>Une mise à jour sera faite quand j'aurais appris ça 😉</p>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fermer</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+    </main>
+
+    <script src="Bootstrap+jquery/jquery-3.6.0.min.js"></script>
+    <script src="Bootstrap+jquery/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
